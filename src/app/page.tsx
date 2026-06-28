@@ -13,11 +13,11 @@ export default function Home() {
             <span className="font-semibold text-xl">Quick Quotes</span>
           </div>
           <nav className="flex items-center gap-4">
-            <Link href="/auth/signin" className="text-sm hover:text-orange-500 transition-colors">
-              Sign In
+            <Link href="/dashboard" className="text-sm hover:text-orange-500 transition-colors">
+              Dashboard
             </Link>
             <Link
-              href="/auth/signup"
+              href="/dashboard"
               className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors"
             >
               Get Started
@@ -39,13 +39,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/auth/signup"
+                href="/dashboard"
                 className="bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-orange-600 transition-colors"
               >
                 Start Free Trial
               </Link>
               <Link
-                href="/auth/signin"
+                href="/dashboard"
                 className="border border-gray-300 px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors"
               >
                 Sign In
@@ -116,7 +116,7 @@ export default function Home() {
               Join tradesmen who save time and win more jobs with Quick Quotes.
             </p>
             <Link
-              href="/auth/signup"
+              href="/dashboard"
               className="bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-orange-600 transition-colors inline-block"
             >
               Create Free Account
