@@ -114,11 +114,11 @@ export default function NewQuotePage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Section Name</label>
-                    <input type="text" value={newSection.name} onChange={e => setNewSection({...newSection, name: e.target.value})} className="w-full px-3 py-2 border rounded-lg" />
+                    <input type="text" value={newSection.name} onChange={e => setNewSection({...newSection, name: e.target.value})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Construction Type</label>
-                    <select value={newSection.constructionType} onChange={e => setNewSection({...newSection, constructionType: e.target.value})} className="w-full px-3 py-2 border rounded-lg">
+                    <select value={newSection.constructionType} onChange={e => setNewSection({...newSection, constructionType: e.target.value})} className="w-full px-3 py-2 border rounded-lg text-gray-900">
                       <option value="cavity_wall">Cavity Wall</option>
                       <option value="brick_only">Brick Only</option>
                       <option value="block_only">Block Only</option>
@@ -126,15 +126,15 @@ export default function NewQuotePage() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Length (m)</label>
-                    <input type="number" value={newSection.wallLength} onChange={e => setNewSection({...newSection, wallLength: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg" />
+                    <input type="number" value={newSection.wallLength} onChange={e => setNewSection({...newSection, wallLength: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Height (m)</label>
-                    <input type="number" value={newSection.wallHeight} onChange={e => setNewSection({...newSection, wallHeight: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg" />
+                    <input type="number" value={newSection.wallHeight} onChange={e => setNewSection({...newSection, wallHeight: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Waste %</label>
-                    <input type="number" value={newSection.wastePercent} onChange={e => setNewSection({...newSection, wastePercent: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg" />
+                    <input type="number" value={newSection.wastePercent} onChange={e => setNewSection({...newSection, wastePercent: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                   </div>
                 </div>
                 <div className="flex gap-2 mt-4">
@@ -145,16 +145,16 @@ export default function NewQuotePage() {
             )}
 
             {sections.length === 0 ? (
-              <p className="text-gray-500 text-center py-4">No sections added yet. Click "Add Section" to start.</p>
+              <p className="text-gray-700 text-center py-4">No sections added yet. Click "Add Section" to start.</p>
             ) : (
               <div className="space-y-3">
                 {sections.map((section, idx) => (
                   <div key={section.id} className="border rounded-lg p-4">
                     <div className="flex justify-between items-center">
                       <h3 className="font-medium">{section.name}</h3>
-                      <span className="text-sm text-gray-500">{section.wallLength}m × {section.wallHeight}m</span>
+                      <span className="text-sm text-gray-700">{section.wallLength}m × {section.wallHeight}m</span>
                     </div>
-                    <p className="text-sm text-gray-500 capitalize">{section.constructionType.replace('_', ' ')} • {section.wastePercent}% waste</p>
+                    <p className="text-sm text-gray-700 capitalize">{section.constructionType.replace('_', ' ')} • {section.wastePercent}% waste</p>
                   </div>
                 ))}
               </div>
@@ -174,19 +174,19 @@ export default function NewQuotePage() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                      <input type="text" value={newOpening.name} onChange={e => setNewOpening({...newOpening, name: e.target.value})} className="w-full px-3 py-2 border rounded-lg" placeholder="e.g. Window" />
+                      <input type="text" value={newOpening.name} onChange={e => setNewOpening({...newOpening, name: e.target.value})} className="w-full px-3 py-2 border rounded-lg text-gray-900" placeholder="e.g. Window" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
-                      <input type="number" value={newOpening.quantity} onChange={e => setNewOpening({...newOpening, quantity: parseInt(e.target.value) || 1})} className="w-full px-3 py-2 border rounded-lg" />
+                      <input type="number" value={newOpening.quantity} onChange={e => setNewOpening({...newOpening, quantity: parseInt(e.target.value) || 1})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Width (m)</label>
-                      <input type="number" value={newOpening.width} onChange={e => setNewOpening({...newOpening, width: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg" />
+                      <input type="number" value={newOpening.width} onChange={e => setNewOpening({...newOpening, width: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Height (m)</label>
-                      <input type="number" value={newOpening.height} onChange={e => setNewOpening({...newOpening, height: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg" />
+                      <input type="number" value={newOpening.height} onChange={e => setNewOpening({...newOpening, height: parseFloat(e.target.value) || 0})} className="w-full px-3 py-2 border rounded-lg text-gray-900" />
                     </div>
                   </div>
                   <div className="flex gap-2 mt-4">
@@ -197,16 +197,16 @@ export default function NewQuotePage() {
               )}
 
               {openings.length === 0 ? (
-                <p className="text-gray-500 text-center py-4">No openings added. Click "Add Opening" for windows/doors.</p>
+                <p className="text-gray-700 text-center py-4">No openings added. Click "Add Opening" for windows/doors.</p>
               ) : (
                 <div className="space-y-3">
                   {openings.map((opening) => (
                     <div key={opening.id} className="border rounded-lg p-4">
                       <div className="flex justify-between items-center">
                         <h3 className="font-medium">{opening.name}</h3>
-                        <span className="text-sm text-gray-500">× {opening.quantity}</span>
+                        <span className="text-sm text-gray-700">× {opening.quantity}</span>
                       </div>
-                      <p className="text-sm text-gray-500">{opening.width}m × {opening.height}m</p>
+                      <p className="text-sm text-gray-700">{opening.width}m × {opening.height}m</p>
                     </div>
                   ))}
                 </div>
