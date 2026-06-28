@@ -68,7 +68,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Masonry Calculator</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Masonry Calculator</h3>
                 <p className="text-gray-700">
                   Automatically calculate bricks, blocks, mortar, and wall ties needed for any wall size. 
                   Supports brickwork, blockwork, and cavity walls.
@@ -82,7 +82,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Materials Pricing</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Materials Pricing</h3>
                 <p className="text-gray-700">
                   Track material prices from suppliers. Get real-time pricing updates and maintain 
                   accurate costings for every job.
@@ -96,7 +96,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Professional PDFs</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Professional PDFs</h3>
                 <p className="text-gray-700">
                   Generate polished, professional PDF quotes with your company branding. 
                   Send directly to customers or print for onsite meetings.
