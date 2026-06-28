@@ -117,8 +117,8 @@ export default function DashboardPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-gray-700">Welcome back! Here&apos;s your quote overview.</p>
+          <h1 className="text-2xl font-bold text-gray-800 text-gray-900">Dashboard</h1>
+          <p className="text-gray-800-700">Welcome back! Here&apos;s your quote overview.</p>
         </div>
 
         {/* Stats Cards */}
@@ -171,7 +171,7 @@ export default function DashboardPage() {
 
         {/* Quick Actions */}
         <div className="bg-white rounded-xl shadow-sm border p-6 mb-8">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h2>
+          <h2 className="text-lg font-semibold text-gray-800 text-gray-900 mb-4">Quick Actions</h2>
           <div className="flex flex-wrap gap-3">
             <Link
               href="/quotes/new"
@@ -206,7 +206,7 @@ export default function DashboardPage() {
         {/* Recent Quotes */}
         <div className="bg-white rounded-xl shadow-sm border">
           <div className="flex items-center justify-between p-6 border-b">
-            <h2 className="text-lg font-semibold text-gray-900">Recent Quotes</h2>
+            <h2 className="text-lg font-semibold text-gray-800 text-gray-900">Recent Quotes</h2>
             <Link href="#" className="text-sm text-orange-500 hover:text-orange-600 font-medium">
               View all →
             </Link>

@@ -57,8 +57,8 @@ export default function QuotesPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Quotes</h1>
-            <p className="text-gray-700">Manage your project quotes</p>
+            <h1 className="text-2xl font-bold text-gray-800 text-gray-900">Quotes</h1>
+            <p className="text-gray-800-700">Manage your project quotes</p>
           </div>
           <Link href="/quotes/new" className="bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600">
             + New Quote
