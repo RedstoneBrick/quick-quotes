@@ -78,7 +78,7 @@ export default function NewQuotePage() {
               <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Q</span>
               </div>
-              <span className="font-semibold text-xl">Quick Quotes</span>
+              <span className="font-semibold text-gray-800">Quick Quotes</span>
             </Link>
             <nav className="flex items-center gap-4">
               <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">Dashboard</Link>
@@ -103,7 +103,7 @@ export default function NewQuotePage() {
           {/* Sections */}
           <div className="bg-white rounded-xl shadow-sm border p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold">Wall Sections</h2>
+              <h2 className="text-lg font-semibold text-gray-800">Wall Sections</h2>
               <button onClick={() => setShowAddSection(true)} className="text-orange-500 hover:text-orange-600 text-sm font-medium">
                 + Add Section
               </button>
@@ -163,7 +163,7 @@ export default function NewQuotePage() {
             {/* Openings */}
             <div className="mt-6 pt-6 border-t">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold">Openings (Windows/Doors)</h2>
+                <h2 className="text-lg font-semibold text-gray-800">Openings (Windows/Doors)</h2>
                 <button onClick={() => setShowAddOpening(true)} className="text-orange-500 hover:text-orange-600 text-sm font-medium">
                   + Add Opening
                 </button>
