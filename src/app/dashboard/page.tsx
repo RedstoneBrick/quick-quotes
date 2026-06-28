@@ -174,7 +174,7 @@ export default function DashboardPage() {
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h2>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="#"
+              href="/quotes/new"
               className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
