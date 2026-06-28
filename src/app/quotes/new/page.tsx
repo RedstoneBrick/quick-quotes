@@ -216,7 +216,7 @@ export default function NewQuotePage() {
 
           {/* Results */}
           <div className="bg-white rounded-xl shadow-sm border p-6">
-            <h2 className="text-lg font-semibold mb-4">Materials Required</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Materials Required</h2>
             
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-orange-50 rounded-lg p-4">
@@ -238,7 +238,7 @@ export default function NewQuotePage() {
             </div>
 
             <div className="border-t pt-6">
-              <h3 className="font-medium mb-4">How it works:</h3>
+              <h3 className="font-medium text-gray-800 mb-4">How it works:</h3>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>• 60 bricks per m² (before waste)</li>
                 <li>• 10 blocks per m² (before waste)</li>
