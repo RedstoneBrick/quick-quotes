@@ -193,7 +193,7 @@ export default function LabourRatesPage() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-semibold text-gray-900">Labour Rates</h1>
-              <p className="text-sm text-gray-600 mt-1">Manage your workforce cost and charge rates</p>
+              <p className="text-sm text-gray-700 mt-1">Manage your workforce cost and charge rates</p>
             </div>
             <button
               onClick={() => setShowForm(true)}
@@ -220,11 +220,11 @@ export default function LabourRatesPage() {
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
-            <div className="text-sm text-gray-500">Total Rates</div>
+            <div className="text-sm text-gray-700">Total Rates</div>
             <div className="text-2xl font-semibold text-gray-900">{labourRates.length}</div>
           </div>
           <div className="bg-white rounded-lg shadow p-4">
-            <div className="text-sm text-gray-500">Default Bricklayer Rate</div>
+            <div className="text-sm text-gray-700">Default Bricklayer Rate</div>
             <div className="text-2xl font-semibold text-gray-900">
               {formatCurrency(
                 labourRates.find((r) => r.isDefault && r.role === 'Bricklayer')?.chargeRate || 0
@@ -233,7 +233,7 @@ export default function LabourRatesPage() {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow p-4">
-            <div className="text-sm text-gray-500">Default Labourer Rate</div>
+            <div className="text-sm text-gray-700">Default Labourer Rate</div>
             <div className="text-2xl font-semibold text-gray-900">
               {formatCurrency(
                 labourRates.find((r) => r.isDefault && r.role === 'Labourer')?.chargeRate || 0
@@ -248,28 +248,28 @@ export default function LabourRatesPage() {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Name
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Role
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Cost/Day
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Charge/Day
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Margin
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Markup
                 </th>
-                <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Default
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
@@ -277,7 +277,7 @@ export default function LabourRatesPage() {
             <tbody className="bg-white divide-y divide-gray-200">
               {filteredRates.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="px-6 py-12 text-center text-gray-500">
+                  <td colSpan={8} className="px-6 py-12 text-center text-gray-700">
                     {searchQuery
                       ? 'No labour rates match your search'
                       : 'No labour rates yet. Add your first rate!'}
@@ -298,16 +298,16 @@ export default function LabourRatesPage() {
                         {rate.role}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-700">
                       {formatCurrency(rate.costRate)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-gray-900">
                       {formatCurrency(rate.chargeRate)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-700">
                       {calculateMargin(rate.costRate, rate.chargeRate)}%
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-700">
                       {calculateMarkup(rate.costRate, rate.chargeRate)}%
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-center">
@@ -405,7 +405,7 @@ export default function LabourRatesPage() {
                     placeholder="180.00"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Your cost for this worker</p>
+                  <p className="text-xs text-gray-700 mt-1">Your cost for this worker</p>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -423,7 +423,7 @@ export default function LabourRatesPage() {
                     placeholder="280.00"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
-                  <p className="text-xs text-gray-500 mt-1">What you charge the customer</p>
+                  <p className="text-xs text-gray-700 mt-1">What you charge the customer</p>
                 </div>
               </div>
 
@@ -431,7 +431,7 @@ export default function LabourRatesPage() {
               {formData.costRate > 0 && formData.chargeRate > 0 && (
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Profit Preview</h4>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-700">
                     <p>
                       Profit per day:{' '}
                       <strong className="text-green-600">

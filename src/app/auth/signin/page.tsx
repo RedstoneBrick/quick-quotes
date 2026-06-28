@@ -38,7 +38,7 @@ export default function SignInPage() {
               <span className="font-semibold text-2xl">Quick Quotes</span>
             </div>
             <h2 className="text-2xl font-bold">Sign in to your account</h2>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-700">
               Or{" "}
               <Link href="/auth/signup" className="text-orange-500 hover:text-orange-600 font-medium">
                 create a new account
@@ -95,7 +95,7 @@ export default function SignInPage() {
                   type="checkbox"
                   className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
                 />
-                <span className="ml-2 text-sm text-gray-600">Remember me</span>
+                <span className="ml-2 text-sm text-gray-700">Remember me</span>
               </label>
               <Link
                 href="/auth/reset-password"

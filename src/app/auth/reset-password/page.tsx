@@ -68,7 +68,7 @@ export default function ResetPasswordPage() {
             <span className="font-semibold text-2xl">Quick Quotes</span>
           </div>
           <h2 className="text-2xl font-bold">Reset your password</h2>
-          <p className="mt-2 text-gray-600">
+          <p className="mt-2 text-gray-700">
             Enter your email and we&apos;ll send you a reset link
           </p>
         </div>

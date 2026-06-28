@@ -128,7 +128,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
     <div className="max-w-6xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Audit Log</h1>
-        <p className="text-gray-600 mt-1">
+        <p className="text-gray-700 mt-1">
           Track all system activities and changes
         </p>
       </div>
@@ -224,7 +224,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
       </div>
 
       {/* Results Count */}
-      <div className="text-sm text-gray-600 mb-4">
+      <div className="text-sm text-gray-700 mb-4">
         Showing {paginatedEvents.length} of {filteredEvents.length} events
       </div>
 
@@ -232,7 +232,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
       {loading ? (
         <div className="text-center py-12">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <p className="text-gray-600 mt-2">Loading audit events...</p>
+          <p className="text-gray-700 mt-2">Loading audit events...</p>
         </div>
       ) : (
         <>
@@ -241,19 +241,19 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Timestamp
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     User
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Action
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Entity
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Changes
                   </th>
                 </tr>
@@ -261,7 +261,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
               <tbody className="bg-white divide-y divide-gray-200">
                 {paginatedEvents.length === 0 ? (
                   <tr>
-                    <td colSpan={5} className="px-6 py-12 text-center text-gray-500">
+                    <td colSpan={5} className="px-6 py-12 text-center text-gray-700">
                       No audit events found
                     </td>
                   </tr>
@@ -271,7 +271,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {formatDateTime(event.createdAt)}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                         {event.userId ? (
                           <span className="font-mono text-xs bg-gray-100 px-2 py-1 rounded">
                             {event.userId.slice(0, 8)}...
@@ -285,7 +285,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
                           {event.action}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                         <div className="flex flex-col">
                           <span className="font-medium text-gray-900">{event.entityType}</span>
                           {event.entityId && (
@@ -295,7 +295,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
                           )}
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600 max-w-xs">
+                      <td className="px-6 py-4 text-sm text-gray-700 max-w-xs">
                         <span className="truncate block" title={formatChanges(event)}>
                           {formatChanges(event)}
                         </span>
@@ -310,7 +310,7 @@ export default function AuditLogPage({ initialEvents = [] }: AuditLogPageProps) 
           {/* Pagination */}
           {totalPages > 1 && (
             <div className="mt-4 flex items-center justify-between">
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-700">
                 Page {page} of {totalPages}
               </div>
               <div className="flex gap-2">

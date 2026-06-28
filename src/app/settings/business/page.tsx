@@ -99,7 +99,7 @@ export default function BusinessSettings({ organisation, onSave }: BusinessSetti
     <div className="max-w-3xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Business Settings</h1>
-        <p className="text-gray-600 mt-1">Manage your organisation profile and default settings</p>
+        <p className="text-gray-700 mt-1">Manage your organisation profile and default settings</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
@@ -139,7 +139,7 @@ export default function BusinessSettings({ organisation, onSave }: BusinessSetti
                   >
                     Upload Logo
                   </label>
-                  <p className="text-xs text-gray-500 mt-1">PNG, JPG up to 2MB</p>
+                  <p className="text-xs text-gray-700 mt-1">PNG, JPG up to 2MB</p>
                 </div>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function BusinessSettings({ organisation, onSave }: BusinessSetti
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Payment terms: Payment due within 30 days of invoice...&#10;Validity: Quote valid for 30 days..."
             />
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-gray-700 mt-1">
               These terms will be applied to all new quotes by default
             </p>
           </div>

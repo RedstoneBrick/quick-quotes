@@ -33,7 +33,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Quick Quotes for Tradesmen
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-10">
               Generate professional quotes for brickwork, blockwork, and cavity wall constructions in minutes. 
               Includes material calculations, pricing, and PDF export.
             </p>
@@ -69,7 +69,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Masonry Calculator</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   Automatically calculate bricks, blocks, mortar, and wall ties needed for any wall size. 
                   Supports brickwork, blockwork, and cavity walls.
                 </p>
@@ -83,7 +83,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Materials Pricing</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   Track material prices from suppliers. Get real-time pricing updates and maintain 
                   accurate costings for every job.
                 </p>
@@ -97,7 +97,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Professional PDFs</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   Generate polished, professional PDF quotes with your company branding. 
                   Send directly to customers or print for onsite meetings.
                 </p>
@@ -112,7 +112,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-6">
               Ready to Streamline Your Quotes?
             </h2>
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
               Join tradesmen who save time and win more jobs with Quick Quotes.
             </p>
             <Link
@@ -136,13 +136,13 @@ export default function Home() {
                 </div>
                 <span className="font-semibold text-lg">Quick Quotes</span>
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-700">
                 Professional quote generation for tradesmen.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-2 text-sm text-gray-700">
                 <li><Link href="#" className="hover:text-orange-500">Features</Link></li>
                 <li><Link href="#" className="hover:text-orange-500">Pricing</Link></li>
                 <li><Link href="#" className="hover:text-orange-500">Documentation</Link></li>
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-2 text-sm text-gray-700">
                 <li><Link href="#" className="hover:text-orange-500">About</Link></li>
                 <li><Link href="#" className="hover:text-orange-500">Blog</Link></li>
                 <li><Link href="#" className="hover:text-orange-500">Contact</Link></li>
@@ -158,13 +158,13 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-2 text-sm text-gray-700">
                 <li><Link href="#" className="hover:text-orange-500">Privacy</Link></li>
                 <li><Link href="#" className="hover:text-orange-500">Terms</Link></li>
               </ul>
             </div>
           </div>
-          <div className="border-t mt-8 pt-8 text-center text-sm text-gray-500">
+          <div className="border-t mt-8 pt-8 text-center text-sm text-gray-700">
             &copy; {new Date().getFullYear()} Quick Quotes. All rights reserved.
           </div>
         </div>

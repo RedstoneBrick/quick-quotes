@@ -121,7 +121,7 @@ export default function PriceAgentDashboard() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Price Agent</h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-700">
             Monitor and manage automated price updates from suppliers
           </p>
         </div>
@@ -149,7 +149,7 @@ export default function PriceAgentDashboard() {
         {/* Last Run Status */}
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">
-            <dt className="text-sm font-medium text-gray-500 truncate">Last Run</dt>
+            <dt className="text-sm font-medium text-gray-700 truncate">Last Run</dt>
             <dd className="mt-1 text-3xl font-semibold text-gray-900">
               {lastRun?.status === 'completed' ? (
                 <span className="text-green-600">Completed</span>
@@ -159,7 +159,7 @@ export default function PriceAgentDashboard() {
                 <span className="text-yellow-600">Running</span>
               )}
             </dd>
-            <dd className="mt-2 text-sm text-gray-500">
+            <dd className="mt-2 text-sm text-gray-700">
               {lastRun ? formatDateTime(lastRun.completedAt || lastRun.startedAt) : 'Never'}
             </dd>
           </div>
@@ -168,20 +168,20 @@ export default function PriceAgentDashboard() {
         {/* Next Scheduled */}
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">
-            <dt className="text-sm font-medium text-gray-500 truncate">Next Scheduled</dt>
+            <dt className="text-sm font-medium text-gray-700 truncate">Next Scheduled</dt>
             <dd className="mt-1 text-3xl font-semibold text-gray-900">Daily</dd>
-            <dd className="mt-2 text-sm text-gray-500">at 06:00 UTC</dd>
+            <dd className="mt-2 text-sm text-gray-700">at 06:00 UTC</dd>
           </div>
         </div>
 
         {/* Products Changed */}
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">
-            <dt className="text-sm font-medium text-gray-500 truncate">Price Changes</dt>
+            <dt className="text-sm font-medium text-gray-700 truncate">Price Changes</dt>
             <dd className="mt-1 text-3xl font-semibold text-gray-900">
               {lastRun?.productsChanged || 0}
             </dd>
-            <dd className="mt-2 text-sm text-gray-500">
+            <dd className="mt-2 text-sm text-gray-700">
               of {lastRun?.productsChecked || 0} products checked
             </dd>
           </div>
@@ -190,11 +190,11 @@ export default function PriceAgentDashboard() {
         {/* Pending Reviews */}
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">
-            <dt className="text-sm font-medium text-gray-500 truncate">Pending Reviews</dt>
+            <dt className="text-sm font-medium text-gray-700 truncate">Pending Reviews</dt>
             <dd className="mt-1 text-3xl font-semibold text-gray-900">
               {lastRun?.productsReviewRequired || 0}
             </dd>
-            <dd className="mt-2 text-sm text-gray-500">
+            <dd className="mt-2 text-sm text-gray-700">
               awaiting approval
             </dd>
           </div>
@@ -210,22 +210,22 @@ export default function PriceAgentDashboard() {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Supplier
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Status
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Last Sync
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Products
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Pending Reviews
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
@@ -250,7 +250,7 @@ export default function PriceAgentDashboard() {
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-700">
                       {getRelativeTime(supplier.lastSync)}
                     </div>
                   </td>
@@ -271,7 +271,7 @@ export default function PriceAgentDashboard() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <button className="text-blue-600 hover:text-blue-900 mr-4">Sync</button>
-                    <button className="text-gray-600 hover:text-gray-900">Configure</button>
+                    <button className="text-gray-700 hover:text-gray-900">Configure</button>
                   </td>
                 </tr>
               ))}
@@ -289,28 +289,28 @@ export default function PriceAgentDashboard() {
           <div className="px-4 py-5 sm:p-6">
             <dl className="grid grid-cols-2 gap-4">
               <div>
-                <dt className="text-sm font-medium text-gray-500">Products Checked</dt>
+                <dt className="text-sm font-medium text-gray-700">Products Checked</dt>
                 <dd className="mt-1 text-2xl font-semibold text-gray-900">{lastRun.productsChecked}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Products Unchanged</dt>
+                <dt className="text-sm font-medium text-gray-700">Products Unchanged</dt>
                 <dd className="mt-1 text-2xl font-semibold text-gray-900">{lastRun.productsUnchanged}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Products Changed</dt>
+                <dt className="text-sm font-medium text-gray-700">Products Changed</dt>
                 <dd className="mt-1 text-2xl font-semibold text-green-600">{lastRun.productsChanged}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Products Failed</dt>
+                <dt className="text-sm font-medium text-gray-700">Products Failed</dt>
                 <dd className="mt-1 text-2xl font-semibold text-red-600">{lastRun.productsFailed}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Review Required</dt>
+                <dt className="text-sm font-medium text-gray-700">Review Required</dt>
                 <dd className="mt-1 text-2xl font-semibold text-yellow-600">{lastRun.productsReviewRequired}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Products Skipped</dt>
-                <dd className="mt-1 text-2xl font-semibold text-gray-600">{lastRun.productsSkipped}</dd>
+                <dt className="text-sm font-medium text-gray-700">Products Skipped</dt>
+                <dd className="mt-1 text-2xl font-semibold text-gray-700">{lastRun.productsSkipped}</dd>
               </div>
             </dl>
           </div>

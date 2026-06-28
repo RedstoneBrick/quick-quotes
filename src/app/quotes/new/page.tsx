@@ -81,7 +81,7 @@ export default function NewQuotePage() {
               <span className="font-semibold text-gray-800">Quick Quotes</span>
             </Link>
             <nav className="flex items-center gap-4">
-              <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">Dashboard</Link>
+              <Link href="/dashboard" className="text-gray-700 hover:text-gray-900">Dashboard</Link>
               <Link href="/quotes" className="text-gray-900 font-medium">Quotes</Link>
             </nav>
           </div>
@@ -220,26 +220,26 @@ export default function NewQuotePage() {
             
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-orange-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600">Bricks</p>
+                <p className="text-sm text-gray-700">Bricks</p>
                 <p className="text-2xl font-bold text-orange-600">{results.totalBricks.toLocaleString()}</p>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600">Blocks</p>
+                <p className="text-sm text-gray-700">Blocks</p>
                 <p className="text-2xl font-bold text-blue-600">{results.totalBlocks.toLocaleString()}</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600">Wall Ties</p>
-                <p className="text-2xl font-bold text-gray-600">{results.totalTies.toLocaleString()}</p>
+                <p className="text-sm text-gray-700">Wall Ties</p>
+                <p className="text-2xl font-bold text-gray-700">{results.totalTies.toLocaleString()}</p>
               </div>
               <div className="bg-green-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600">Net Area</p>
+                <p className="text-sm text-gray-700">Net Area</p>
                 <p className="text-2xl font-bold text-green-600">{results.totalArea.toFixed(2)} m²</p>
               </div>
             </div>
 
             <div className="border-t pt-6">
               <h3 className="font-medium text-gray-800 mb-4">How it works:</h3>
-              <ul className="text-sm text-gray-600 space-y-2">
+              <ul className="text-sm text-gray-700 space-y-2">
                 <li>• 60 bricks per m² (before waste)</li>
                 <li>• 10 blocks per m² (before waste)</li>
                 <li>• 2.5 wall ties per m² (cavity walls)</li>

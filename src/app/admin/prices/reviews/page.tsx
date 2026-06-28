@@ -115,7 +115,7 @@ function getConfidenceLabel(score: number): string {
 function getChangeColor(percent: number): string {
   if (percent > 10) return 'text-red-600';
   if (percent > 0) return 'text-green-600';
-  return 'text-gray-600';
+  return 'text-gray-700';
 }
 
 export default function PriceReviewsPage() {
@@ -178,7 +178,7 @@ export default function PriceReviewsPage() {
       {/* Page Header */}
       <div>
         <h1 className="text-2xl font-bold text-gray-900">Price Reviews</h1>
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-gray-700">
           Review and approve price changes from suppliers
         </p>
       </div>
@@ -191,7 +191,7 @@ export default function PriceReviewsPage() {
             className={`py-4 px-1 border-b-2 font-medium text-sm ${
               filter === 'pending'
                 ? 'border-blue-500 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
             Pending Review
@@ -206,11 +206,11 @@ export default function PriceReviewsPage() {
             className={`py-4 px-1 border-b-2 font-medium text-sm ${
               filter === 'approved'
                 ? 'border-blue-500 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
             Approved
-            <span className="ml-2 bg-gray-100 text-gray-600 py-0.5 px-2 rounded-full text-xs">
+            <span className="ml-2 bg-gray-100 text-gray-700 py-0.5 px-2 rounded-full text-xs">
               {approvedCount}
             </span>
           </button>
@@ -219,11 +219,11 @@ export default function PriceReviewsPage() {
             className={`py-4 px-1 border-b-2 font-medium text-sm ${
               filter === 'rejected'
                 ? 'border-blue-500 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
             Rejected
-            <span className="ml-2 bg-gray-100 text-gray-600 py-0.5 px-2 rounded-full text-xs">
+            <span className="ml-2 bg-gray-100 text-gray-700 py-0.5 px-2 rounded-full text-xs">
               {rejectedCount}
             </span>
           </button>
@@ -232,7 +232,7 @@ export default function PriceReviewsPage() {
             className={`py-4 px-1 border-b-2 font-medium text-sm ${
               filter === 'all'
                 ? 'border-blue-500 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
             All
@@ -244,7 +244,7 @@ export default function PriceReviewsPage() {
       <div className="bg-white shadow rounded-lg overflow-hidden">
         {filteredReviews.length === 0 ? (
           <div className="px-4 py-12 text-center">
-            <p className="text-gray-500">No reviews found</p>
+            <p className="text-gray-700">No reviews found</p>
           </div>
         ) : (
           <ul className="divide-y divide-gray-200">
@@ -271,7 +271,7 @@ export default function PriceReviewsPage() {
                         {review.status}
                       </span>
                     </div>
-                    <p className="mt-1 text-sm text-gray-500">{review.supplier}</p>
+                    <p className="mt-1 text-sm text-gray-700">{review.supplier}</p>
                     
                     {/* Source URL */}
                     {review.sourceUrl && (
@@ -290,7 +290,7 @@ export default function PriceReviewsPage() {
                     
                     {/* Confidence Score */}
                     <div className="mt-2 flex items-center gap-2">
-                      <span className="text-xs text-gray-500">Confidence:</span>
+                      <span className="text-xs text-gray-700">Confidence:</span>
                       <span
                         className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${getConfidenceColor(review.confidenceScore)}`}
                       >
@@ -303,14 +303,14 @@ export default function PriceReviewsPage() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div className="flex items-baseline gap-4">
                       <div>
-                        <span className="text-xs text-gray-500 block">Old Price</span>
+                        <span className="text-xs text-gray-700 block">Old Price</span>
                         <span className="text-lg font-medium text-gray-900">
                           {formatCurrency(review.oldPrice)}
                         </span>
                       </div>
                       <div className="text-gray-400">→</div>
                       <div>
-                        <span className="text-xs text-gray-500 block">New Price</span>
+                        <span className="text-xs text-gray-700 block">New Price</span>
                         {editingId === review.id ? (
                           <div className="flex items-center gap-2">
                             <span className="text-lg font-medium text-gray-900">£</span>
@@ -392,7 +392,7 @@ export default function PriceReviewsPage() {
 
       {/* Summary */}
       <div className="bg-gray-50 rounded-lg px-4 py-3 flex items-center justify-between">
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-gray-700">
           Showing {filteredReviews.length} of {reviews.length} reviews
         </div>
         <div className="flex items-center gap-4">

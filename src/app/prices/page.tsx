@@ -269,28 +269,28 @@ export default function PricesPage() {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Material
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Category
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Supplier
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Pack Price
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Pack Qty
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Unit Price
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                   VAT
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
@@ -298,7 +298,7 @@ export default function PricesPage() {
             <tbody className="bg-white divide-y divide-gray-200">
               {filteredPrices.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="px-6 py-12 text-center text-gray-500">
+                  <td colSpan={8} className="px-6 py-12 text-center text-gray-700">
                     {searchQuery
                       ? 'No prices match your search'
                       : 'No prices yet. Add your first price!'}
@@ -313,26 +313,26 @@ export default function PricesPage() {
                   >
                     <td className="px-6 py-4">
                       <div className="text-sm font-medium text-gray-900">{price.material.name}</div>
-                      <div className="text-xs text-gray-500">{price.material.specification}</div>
+                      <div className="text-xs text-gray-700">{price.material.specification}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded">
                         {price.material.category}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                       {price.supplierName || '-'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-gray-900">
                       {formatCurrency(price.price)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-700">
                       {price.packQuantity || '-'}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-700">
                       {formatCurrency(price.unitPrice)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                       {price.vatStatus === 'inclusive' ? 'Inc. VAT' : 'Ex. VAT'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
@@ -466,7 +466,7 @@ export default function PricesPage() {
               {formData.packPrice && formData.packQuantity && (
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Price Preview</h4>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-700">
                     <p>
                       Pack price: <strong>£{formData.packPrice}</strong>
                     </p>

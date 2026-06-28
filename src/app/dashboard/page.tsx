@@ -98,14 +98,14 @@ export default function DashboardPage() {
               </Link>
             </div>
             <div className="flex items-center gap-4">
-              <button className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+              <button className="p-2 text-gray-700 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                 </svg>
               </button>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-gray-600">JS</span>
+                  <span className="text-sm font-medium text-gray-700">JS</span>
                 </div>
                 <span className="text-sm font-medium text-gray-700">John Smith</span>
               </div>
@@ -118,7 +118,7 @@ export default function DashboardPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-gray-600">Welcome back! Here&apos;s your quote overview.</p>
+          <p className="text-gray-700">Welcome back! Here&apos;s your quote overview.</p>
         </div>
 
         {/* Stats Cards */}
@@ -126,7 +126,7 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl shadow-sm border p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-600 mb-1">Total Quotes</p>
+                <p className="text-sm text-gray-700 mb-1">Total Quotes</p>
                 <p className="text-3xl font-bold text-gray-900">{stats.totalQuotes}</p>
               </div>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -135,13 +135,13 @@ export default function DashboardPage() {
                 </svg>
               </div>
             </div>
-            <p className="text-sm text-gray-500 mt-2">All time</p>
+            <p className="text-sm text-gray-700 mt-2">All time</p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm border p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-600 mb-1">Pending</p>
+                <p className="text-sm text-gray-700 mb-1">Pending</p>
                 <p className="text-3xl font-bold text-yellow-600">{stats.pending}</p>
               </div>
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
@@ -150,13 +150,13 @@ export default function DashboardPage() {
                 </svg>
               </div>
             </div>
-            <p className="text-sm text-gray-500 mt-2">Awaiting response</p>
+            <p className="text-sm text-gray-700 mt-2">Awaiting response</p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm border p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-600 mb-1">Accepted</p>
+                <p className="text-sm text-gray-700 mb-1">Accepted</p>
                 <p className="text-3xl font-bold text-green-600">{stats.accepted}</p>
               </div>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -165,7 +165,7 @@ export default function DashboardPage() {
                 </svg>
               </div>
             </div>
-            <p className="text-sm text-gray-500 mt-2">Won jobs</p>
+            <p className="text-sm text-gray-700 mt-2">Won jobs</p>
           </div>
         </div>
 
@@ -213,9 +213,9 @@ export default function DashboardPage() {
           </div>
           
           {isLoading ? (
-            <div className="p-6 text-center text-gray-500">Loading quotes...</div>
+            <div className="p-6 text-center text-gray-700">Loading quotes...</div>
           ) : quotes.length === 0 ? (
-            <div className="p-6 text-center text-gray-500">
+            <div className="p-6 text-center text-gray-700">
               No quotes yet. Create your first quote to get started.
             </div>
           ) : (
@@ -228,7 +228,7 @@ export default function DashboardPage() {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">{quote.title}</p>
-                      <p className="text-sm text-gray-500">{quote.customerName} • {quote.createdAt}</p>
+                      <p className="text-sm text-gray-700">{quote.customerName} • {quote.createdAt}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -236,7 +236,7 @@ export default function DashboardPage() {
                       {quote.status.charAt(0).toUpperCase() + quote.status.slice(1)}
                     </span>
                     <span className="font-semibold text-gray-900">{formatCurrency(quote.total)}</span>
-                    <button className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg">
+                    <button className="p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

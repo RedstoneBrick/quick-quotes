@@ -78,7 +78,7 @@ export default function SignUpPage() {
               <span className="font-semibold text-2xl">Quick Quotes</span>
             </div>
             <h2 className="text-2xl font-bold">Create your account</h2>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-700">
               Already have an account?{" "}
               <Link href="/auth/signin" className="text-orange-500 hover:text-orange-600 font-medium">
                 Sign in
@@ -187,7 +187,7 @@ export default function SignUpPage() {
                 onChange={handleChange}
                 className="h-4 w-4 mt-1 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
               />
-              <span className="ml-2 text-sm text-gray-600">
+              <span className="ml-2 text-sm text-gray-700">
                 I agree to the{" "}
                 <Link href="#" className="text-orange-500 hover:text-orange-600">
                   Terms of Service

@@ -45,10 +45,10 @@ export default function QuotesPage() {
               <span className="font-semibold text-xl">Quick Quotes</span>
             </Link>
             <nav className="flex items-center gap-4">
-              <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">Dashboard</Link>
+              <Link href="/dashboard" className="text-gray-700 hover:text-gray-900">Dashboard</Link>
               <Link href="/quotes" className="text-gray-900 font-medium">Quotes</Link>
-              <Link href="/customers" className="text-gray-600 hover:text-gray-900">Customers</Link>
-              <Link href="/materials" className="text-gray-600 hover:text-gray-900">Materials</Link>
+              <Link href="/customers" className="text-gray-700 hover:text-gray-900">Customers</Link>
+              <Link href="/materials" className="text-gray-700 hover:text-gray-900">Materials</Link>
             </nav>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function QuotesPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Quotes</h1>
-            <p className="text-gray-600">Manage your project quotes</p>
+            <p className="text-gray-700">Manage your project quotes</p>
           </div>
           <Link href="/quotes/new" className="bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600">
             + New Quote
@@ -69,27 +69,27 @@ export default function QuotesPage() {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quote #</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Title</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Customer</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Total</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Quote #</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Title</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Customer</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Status</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Total</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Date</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {quotes.map((quote) => (
                 <tr key={quote.id} className="hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{quote.quoteNumber}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{quote.title}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{quote.customerName}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{quote.title}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{quote.customerName}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(quote.status)}`}>
                       {quote.status}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{formatCurrency(quote.total)}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{quote.createdAt}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{quote.createdAt}</td>
                 </tr>
               ))}
             </tbody>
